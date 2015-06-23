@@ -1,0 +1,16 @@
+I"C(function() {
+  var app;
+
+  app = angular.module('recipebook', ['templates', 'ngRoute', 'controllers']);
+
+  app.config([
+    '$routeProvider', function($routeProvider) {
+      return $routeProvider.when('/', {
+        templateUrl: "index.html",
+        controller: 'WelcomeController'
+      });
+    }
+  ]);
+
+}).call(this);
+:ET

@@ -1,0 +1,7 @@
+I"~(function() {
+  var app;
+
+  app = angular.module('recipebook', ['templates', 'ngRoute', 'controllers']);
+
+}).call(this);
+:ET

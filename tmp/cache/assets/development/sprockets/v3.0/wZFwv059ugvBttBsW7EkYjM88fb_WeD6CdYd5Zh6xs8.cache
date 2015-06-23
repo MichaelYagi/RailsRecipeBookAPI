@@ -1,0 +1,7 @@
+I"g(function() {
+  var recipebook;
+
+  recipebook = angular.module('recipebook', []);
+
+}).call(this);
+:ET

@@ -1,0 +1,41 @@
+### 
+Setup notes
+
+gem 'sprockets', '2.12.3' needed to be added
+
+assets/javascripts/application.js
+	Added:
+	//= require angular/angular
+	//= require angular-route/angular-route
+	//= require angular-rails-templates
+	//= require_tree ./templates
+	
+views/welcome/index.html.erb
+	Markup needed to boot Angular
+###
+
+app = angular.module('recipebook',[
+	'templates',
+	'ngRoute',
+	'controllers'
+])
+
+app.config([ '$routeProvider',
+	($routeProvider)->
+		$routeProvider
+			.when('/', {
+				templateUrl: 'welcome/index.html',
+				controller: 'WelcomeController'
+			})
+			.when('/users/new', {
+				templateUrl: '<%= asset_path 'users/new.html' %>',
+				controller: 'UsersController'
+			})
+])
+
+controllers = angular.module('controllers',[])
+
+controllers
+	.controller("WelcomeController", [ '$scope',
+		($scope)->
+	])

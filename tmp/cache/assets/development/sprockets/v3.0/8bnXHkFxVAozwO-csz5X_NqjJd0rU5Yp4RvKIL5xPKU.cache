@@ -1,0 +1,24 @@
+I"³(function() {
+  var app;
+
+  app = angular.module('recipebook', ['templates', 'ngRoute', 'controllers']);
+
+
+  /*
+  app.config([ '$routeProvider',
+  	($routeProvider)->
+  		$routeProvider.when('/', {
+  				templateUrl: 'index.html',
+  				controller: 'WelcomeController'
+  		})
+  ])
+  
+  controllers = angular.module('controllers',[])
+  
+  controllers.controller("WelcomeController", [ '$scope',
+  	($scope)->
+  ])
+   */
+
+}).call(this);
+:ET

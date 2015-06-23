@@ -1,0 +1,7 @@
+I"x(function() {
+  var receta;
+
+  receta = angular.module('RecipeBookApp').controller('Welcome', []);
+
+}).call(this);
+:ET

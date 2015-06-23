@@ -1,0 +1,7 @@
+I"\(function() {
+  var receta;
+
+  receta = angular.module('welcome', []);
+
+}).call(this);
+:ET
