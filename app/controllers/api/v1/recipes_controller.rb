@@ -1,7 +1,16 @@
 class Api::V1::RecipesController < Api::ApiController
 	respond_to :html, :xml, :json
 	
-	before_action :authenticate, :except => [:show, :users, :search]
+	before_action :authenticate, :except => [:index, :show, :users, :search]
+	
+	def index
+		
+		@recipes = Recipe.where(:published => 1).select('recipes.*')
+		
+		ret_recipe = JSON.parse(@recipes.to_json)
+		
+		respond_with ret_recipe
+	end
 	
 	def create
 		new_recipe = JSON.parse(params[:new_recipe])
